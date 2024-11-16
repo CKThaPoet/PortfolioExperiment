@@ -1,0 +1,548 @@
+[
+  {
+    "title": "The Souls of Black Folk",
+    "author": "W.E.B. Du Bois",
+    "year": 1903,
+    "genre": "Non-fiction, History",
+    "publisher": "A.C. McClurg & Co."
+  },
+  {
+    "title": "Narrative of the Life of Frederick Douglass, an American Slave",
+    "author": "Frederick Douglass",
+    "year": 1845,
+    "genre": "Autobiography",
+    "publisher": "Anti-Slavery Office"
+  },
+  {
+    "title": "Up From Slavery",
+    "author": "Booker T. Washington",
+    "year": 1901,
+    "genre": "Autobiography",
+    "publisher": "Doubleday, Page & Co."
+  },
+  {
+    "title": "The Warmth of Other Suns: The Epic Story of America's Great Migration",
+    "author": "Isabel Wilkerson",
+    "year": 2010,
+    "genre": "Non-fiction, History",
+    "publisher": "Random House"
+  },
+  {
+    "title": "The New Jim Crow: Mass Incarceration in the Age of Colorblindness",
+    "author": "Michelle Alexander",
+    "year": 2010,
+    "genre": "Non-fiction, Law",
+    "publisher": "The New Press"
+  },
+  {
+    "title": "Beloved",
+    "author": "Toni Morrison",
+    "year": 1987,
+    "genre": "Fiction",
+    "publisher": "Alfred A. Knopf"
+  },
+  {
+    "title": "Between the World and Me",
+    "author": "Ta-Nehisi Coates",
+    "year": 2015,
+    "genre": "Non-fiction, Memoir",
+    "publisher": "Spiegel & Grau"
+  },
+  {
+    "title": "Their Eyes Were Watching God",
+    "author": "Zora Neale Hurston",
+    "year": 1937,
+    "genre": "Fiction",
+    "publisher": "J.B. Lippincott"
+  },
+  {
+    "title": "The Autobiography of Malcolm X",
+    "author": "Malcolm X as told to Alex Haley",
+    "year": 1965,
+    "genre": "Autobiography",
+    "publisher": "Grove Press"
+  },
+  {
+    "title": "I Know Why the Caged Bird Sings",
+    "author": "Maya Angelou",
+    "year": 1969,
+    "genre": "Autobiography",
+    "publisher": "Random House"
+  },
+  {
+    "title": "The Fire Next Time",
+    "author": "James Baldwin",
+    "year": 1963,
+    "genre": "Non-fiction, Essays",
+    "publisher": "Dial Press"
+  },
+  {
+    "title": "Slavery by Another Name: The Re-Enslavement of Black Americans from the Civil War to World War II",
+    "author": "Douglas A. Blackmon",
+    "year": 2008,
+    "genre": "Non-fiction, History",
+    "publisher": "Doubleday"
+  },
+  {
+    "title": "The Mis-Education of the Negro",
+    "author": "Carter G. Woodson",
+    "year": 1933,
+    "genre": "Non-fiction, Education",
+    "publisher": "Associated Publishers"
+  },
+  {
+    "title": "Roots: The Saga of an American Family",
+    "author": "Alex Haley",
+    "year": 1976,
+    "genre": "Historical Fiction",
+    "publisher": "Doubleday"
+  },
+  {
+    "title": "A People’s History of the New Nation: 1945–1964",
+    "author": "Howard Zinn",
+    "year": 2003,
+    "genre": "History",
+    "publisher": "Harper and Row"
+  },
+  {
+    "title": "Invisible Man",
+    "author": "Ralph Ellison",
+    "year": 1952,
+    "genre": "Fiction",
+    "publisher": "Random House"
+  },
+  {
+    "title": "The Black Panthers: Portraits from an Unfinished Revolution",
+    "author": "Bryan Shuler",
+    "year": 2016,
+    "genre": "Non-fiction, History",
+    "publisher": "Haymarket Books"
+  },
+  {
+    "title": "Black Boy",
+    "author": "Richard Wright",
+    "year": 1945,
+    "genre": "Autobiography",
+    "publisher": "Harper & Brothers"
+  },
+  {
+    "title": "The Color Purple",
+    "author": "Alice Walker",
+    "year": 1982,
+    "genre": "Fiction",
+    "publisher": "Harcourt Brace Jovanovich"
+  },
+  {
+    "title": "Sister Outsider: Essays and Speeches",
+    "author": "Audre Lorde",
+    "year": 1984,
+    "genre": "Non-fiction, Essays",
+    "publisher": "Crossing Press"
+  },
+  {
+    "title": "Go Tell It on the Mountain",
+    "author": "James Baldwin",
+    "year": 1953,
+    "genre": "Fiction",
+    "publisher": "Knopf"
+  },
+  {
+    "title": "Black Feminist Thought: Knowledge, Consciousness, and the Politics of Empowerment",
+    "author": "Patricia Hill Collins",
+    "year": 1990,
+    "genre": "Non-fiction, Sociology",
+    "publisher": "Routledge"
+  },
+  {
+    "title": "A Raisin in the Sun",
+    "author": "Lorraine Hansberry",
+    "year": 1959,
+    "genre": "Drama",
+    "publisher": "Random House"
+  },
+  {
+    "title": "The Bluest Eye",
+    "author": "Toni Morrison",
+    "year": 1970,
+    "genre": "Fiction",
+    "publisher": "Holt, Rinehart & Winston"
+  },
+  {
+    "title": "Freedom Is a Constant Struggle: Ferguson, Palestine, and the Foundations of a Movement",
+    "author": "Angela Y. Davis",
+    "year": 2016,
+    "genre": "Non-fiction, Essays",
+    "publisher": "Haymarket Books"
+  },
+  {
+    "title": "Ain't I a Woman: Black Women and Feminism",
+    "author": "bell hooks",
+    "year": 1981,
+    "genre": "Non-fiction, Feminism",
+    "publisher": "South End Press"
+  },
+  {
+    "title": "The Condemnation of Blackness: Race, Crime, and the Making of Modern Urban America",
+    "author": "Khalil Gibran Muhammad",
+    "year": 2010,
+    "genre": "Non-fiction, History",
+    "publisher": "Harvard University Press"
+  },
+  {
+    "title": "When They Call You a Terrorist: A Black Lives Matter Memoir",
+    "author": "Patrisse Khan-Cullors and asha bandele",
+    "year": 2018,
+    "genre": "Non-fiction, Memoir",
+    "publisher": "St. Martin's Press"
+  },
+  {
+    "title": "The Color of Law: A Forgotten History of How Our Government Segregated America",
+    "author": "Richard Rothstein",
+    "year": 2017,
+    "genre": "Non-fiction, History",
+    "publisher": "Liveright"
+  },
+  {
+    "title": "Black Against Empire: The History and Politics of the Black Panther Party",
+    "author": "Joshua Bloom and Waldo E. Martin Jr.",
+    "year": 2013,
+    "genre": "Non-fiction, History",
+    "publisher": "University of California Press"
+  },
+  {
+    "title": "Kindred",
+    "author": "Octavia Butler",
+    "year": 1979,
+    "genre": "Science Fiction",
+    "publisher": "Doubleday"
+  },
+  {
+    "title": "The Underground Railroad",
+    "author": "Colson Whitehead",
+    "year": 2016,
+    "genre": "Fiction",
+    "publisher": "Doubleday"
+  },
+  {
+    "title": "The History of White People",
+    "author": "Nell Irvin Painter",
+    "year": 2010,
+    "genre": "Non-fiction, History",
+    "publisher": "W.W. Norton & Company"
+  },
+  {
+    "title": "Eloquent Rage: A Black Feminist Discovers Her Superpower",
+    "author": "Brittney Cooper",
+    "year": 2018,
+    "genre": "Non-fiction, Memoir",
+    "publisher": "St. Martin's Press"
+  },
+  {
+    "title": "We Should All Be Feminists",
+    "author": "Chimamanda Ngozi Adichie",
+    "year": 2014,
+    "genre": "Non-fiction, Essays",
+    "publisher": "Anchor"
+  },
+  {
+    "title": "The Color of Money: Black Banks and the Racial Wealth Gap",
+    "author": "Mehrsa Baradaran",
+    "year": 2017,
+    "genre": "Non-fiction, Economics",
+    "publisher": "Belknap Press"
+  },
+  {
+    "title": "How to Be an Antiracist",
+    "author": "Ibram X. Kendi",
+    "year": 2019,
+    "genre": "Non-fiction, Sociology",
+    "publisher": "One World"
+  },
+  {
+    "title": "Blood in the Water: The Attica Prison Uprising of 1971 and Its Legacy",
+    "author": "Heather Ann Thompson",
+    "year": 2016,
+    "genre": "Non-fiction, History",
+    "publisher": "Pantheon"
+  },
+  {
+    "title": "The Color Complex: The Politics of Skin Color Among African Americans",
+    "author": "Kathy Russell, Midge Wilson, and Ronald Hall",
+    "year": 1992,
+    "genre": "Non-fiction, Sociology",
+    "publisher": "Anchor"
+  },
+  {
+    "title": "The Slave Ship: A Human History",
+    "author": "Marcus Rediker",
+    "year": 2007,
+    "genre": "Non-fiction, History",
+    "publisher": "Viking"
+  },
+  {
+    "title": "Women, Race, & Class",
+    "author": "Angela Y. Davis",
+    "year": 1981,
+    "genre": "Non-fiction, Feminism",
+    "publisher": "Random House"
+  },
+  {
+    "title": "The Black Jacobins: Toussaint L'Ouverture and the San Domingo Revolution",
+    "author": "C.L.R. James",
+    "year": 1938,
+    "genre": "Non-fiction, History",
+    "publisher": "Secker & Warburg"
+  },
+  {
+    "title": "Medical Apartheid: The Dark History of Medical Experimentation on Black Americans from Colonial Times to the Present",
+    "author": "Harriet A. Washington",
+    "year": 2007,
+    "genre": "Non-fiction, History",
+    "publisher": "Doubleday"
+  },
+  {
+    "title": "Stamped from the Beginning: The Definitive History of Racist Ideas in America",
+    "author": "Ibram X. Kendi",
+    "year": 2016,
+    "genre": "Non-fiction, History",
+    "publisher": "Nation Books"
+  },
+  {
+    "title": "The Half Has Never Been Told: Slavery and the Making of American Capitalism",
+    "author": "Edward E. Baptist",
+    "year": 2014,
+    "genre": "Non-fiction, History",
+    "publisher": "Basic Books"
+  },
+  {
+    "title": "Assata: An Autobiography",
+    "author": "Assata Shakur",
+    "year": 1987,
+    "genre": "Autobiography",
+    "publisher": "Lawrence Hill Books"
+  },
+  {
+    "title": "Your Blues Ain't Like Mine",
+    "author": "Bebe Moore Campbell",
+    "year": 1992,
+    "genre": "Fiction",
+    "publisher": "G.P. Putnam's Sons"
+  },
+  {
+    "title": "Long Walk to Freedom",
+    "author": "Nelson Mandela",
+    "year": 1994,
+    "genre": "Autobiography",
+    "publisher": "Little, Brown and Company"
+  },
+  {
+    "title": "An African American and Latinx History of the United States",
+    "author": "Paul Ortiz",
+    "year": 2018,
+    "genre": "Non-fiction, History",
+    "publisher": "Beacon Press"
+  },
+  {
+    "title": "Notes of a Native Son",
+    "author": "James Baldwin",
+    "year": 1955,
+    "genre": "Non-fiction, Essays",
+    "publisher": "Beacon Press"
+  },
+  {
+    "title": "The Fire This Time: A New Generation Speaks About Race",
+    "author": "Jesmyn Ward",
+    "year": 2016,
+    "genre": "Non-fiction, Essays",
+    "publisher": "Scribner"
+  },
+  {
+    "title": "Tears We Cannot Stop: A Sermon to White America",
+    "author": "Michael Eric Dyson",
+    "year": 2017,
+    "genre": "Non-fiction, Essays",
+    "publisher": "St. Martin's Press"
+  },
+  {
+    "title": "Why Are All the Black Kids Sitting Together in the Cafeteria?",
+    "author": "Beverly Daniel Tatum",
+    "year": 1997,
+    "genre": "Non-fiction, Sociology",
+    "publisher": "Basic Books"
+  },
+  {
+    "title": "Heavy: An American Memoir",
+    "author": "Kiese Laymon",
+    "year": 2018,
+    "genre": "Non-fiction, Memoir",
+    "publisher": "Scribner"
+  },
+  {
+    "title": "The Interesting Narrative of the Life of Olaudah Equiano",
+    "author": "Olaudah Equiano",
+    "year": 1789,
+    "genre": "Autobiography",
+    "publisher": "Self-published"
+  },
+  {
+    "title": "White Rage: The Unspoken Truth of Our Racial Divide",
+    "author": "Carol Anderson",
+    "year": 2016,
+    "genre": "Non-fiction, History",
+    "publisher": "Bloomsbury"
+  },
+  {
+    "title": "The Black and the Blue: A Cop Reveals the Crimes, Racism, and Injustice in America's Law Enforcement",
+    "author": "Matthew Horace and Ron Harris",
+    "year": 2018,
+    "genre": "Non-fiction, Law",
+    "publisher": "Hachette Books"
+  },
+  {
+    "title": "Hood Feminism: Notes from the Women That a Movement Forgot",
+    "author": "Mikki Kendall",
+    "year": 2020,
+    "genre": "Non-fiction, Essays",
+    "publisher": "Viking"
+  },
+  {
+    "title": "The Blacker the Berry",
+    "author": "Wallace Thurman",
+    "year": 1929,
+    "genre": "Fiction",
+    "publisher": "Macaulay"
+  },
+  {
+    "title": "Dusk of Dawn: An Essay Toward an Autobiography of a Race Concept",
+    "author": "W.E.B. Du Bois",
+    "year": 1940,
+    "genre": "Autobiography",
+    "publisher": "Harcourt, Brace and Company"
+  },
+  {
+    "title": "The Water Dancer",
+    "author": "Ta-Nehisi Coates",
+    "year": 2019,
+    "genre": "Fiction",
+    "publisher": "One World"
+  },
+  {
+    "title": "Born a Crime: Stories from a South African Childhood",
+    "author": "Trevor Noah",
+    "year": 2016,
+    "genre": "Non-fiction, Memoir",
+    "publisher": "Spiegel & Grau"
+  },
+  {
+    "title": "Race Matters",
+    "author": "Cornel West",
+    "year": 1993,
+    "genre": "Non-fiction, Essays",
+    "publisher": "Beacon Press"
+  },
+  {
+    "title": "The Autobiography of an Ex-Colored Man",
+    "author": "James Weldon Johnson",
+    "year": 1912,
+    "genre": "Fiction",
+    "publisher": "Sherman, French & Company"
+  },
+  {
+    "title": "A More Beautiful and Terrible History: The Uses and Misuses of Civil Rights History",
+    "author": "Jeanne Theoharis",
+    "year": 2018,
+    "genre": "Non-fiction, History",
+    "publisher": "Beacon Press"
+  },
+  {
+    "title": "March: Book One",
+    "author": "John Lewis, Andrew Aydin, and Nate Powell",
+    "year": 2013,
+    "genre": "Graphic Novel, History",
+    "publisher": "Top Shelf Productions"
+  },
+  {
+    "title": "The Color of Success: Asian Americans and the Origins of the Model Minority",
+    "author": "Ellen D. Wu",
+    "year": 2014,
+    "genre": "Non-fiction, Sociology",
+    "publisher": "Princeton University Press"
+  },
+  {
+    "title": "Cane",
+    "author": "Jean Toomer",
+    "year": 1923,
+    "genre": "Fiction",
+    "publisher": "Boni & Liveright"
+  },
+  {
+    "title": "The Hate U Give",
+    "author": "Angie Thomas",
+    "year": 2017,
+    "genre": "Fiction",
+    "publisher": "Balzer + Bray"
+  },
+  {
+    "title": "The Blacker the Ink: Constructions of Black Identity in Comics and Sequential Art",
+    "author": "Frances Gateward and John Jennings",
+    "year": 2015,
+    "genre": "Non-fiction, Essays",
+    "publisher": "Rutgers University Press"
+  },
+  {
+    "title": "Freedom Farmers: Agricultural Resistance and the Black Freedom Movement",
+    "author": "Monica M. White",
+    "year": 2018,
+    "genre": "Non-fiction, History",
+    "publisher": "University of North Carolina Press"
+  },
+  {
+    "title": "The Color of Water: A Black Man's Tribute to His White Mother",
+    "author": "James McBride",
+    "year": 1995,
+    "genre": "Non-fiction, Memoir",
+    "publisher": "Riverhead Books"
+  },
+  {
+    "title": "Caste: The Origins of Our Discontents",
+    "author": "Isabel Wilkerson",
+    "year": 2020,
+    "genre": "Non-fiction, History",
+    "publisher": "Random House"
+  },
+  {
+    "title": "The Nickel Boys",
+    "author": "Colson Whitehead",
+    "year": 2019,
+    "genre": "Fiction",
+    "publisher": "Doubleday"
+  },
+  {
+    "title": "Black on Both Sides: A Racial History of Trans Identity",
+    "author": "C. Riley Snorton",
+    "year": 2017,
+    "genre": "Non-fiction, Sociology",
+    "publisher": "University of Minnesota Press"
+  },
+  {
+    "title": "Killing Rage: Ending Racism",
+    "author": "bell hooks",
+    "year": 1995,
+    "genre": "Non-fiction, Essays",
+    "publisher": "Holt Paperbacks"
+  },
+  {
+    "title": "The Black Presidency: Barack Obama and the Politics of Race in America",
+    "author": "Michael Eric Dyson",
+    "year": 2016,
+    "genre": "Non-fiction, Political Science",
+    "publisher": "Houghton Mifflin Harcourt"
+  },
+  {
+    "title": "The Fire Next Time",
+    "author": "James Baldwin",
+    "year": 1963,
+    "genre": "Non-fiction, Essays",
+    "publisher": "Dial Press"
+  }
+]

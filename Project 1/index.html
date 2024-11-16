@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>African American Ancestor History</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://cardinalatwork.stanford.edu/sites/cardinalatwork/files/styles/breakpoint_2xl_2x/public/media/image/gallery/black_history_month_celebrating_and_colors_background_0.png?itok=qTE_kOqd') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        #book-container {
+            background-color: rgba(74, 74, 112, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 1000px;
+            text-align: center;
+        }
+        #rating-form {
+            margin-top: 20px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #ff6348;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e5533d;
+        }
+    </style>
+</head>
+<body>
+    <div id="book-container">
+        <h2 id="book-title">Loading...</h2>
+        <p id="book-details"></p>
+        <form id="rating-form">
+            <label>
+                <input type="radio" name="rating" value="1"> 1
+            </label><br>
+            <label>
+                <input type="radio" name="rating" value="2"> 2
+            </label><br>
+            <label>
+                <input type="radio" name="rating" value="3"> 3
+            </label><br>
+            <label>
+                <input type="radio" name="rating" value="4"> 4
+            </label><br>
+            <label>
+                <input type="radio" name="rating" value="5"> 5
+            </label><br>
+            <label>
+                <input type="radio" name="rating" value="haven't read"> Haven't read it
+            </label><br>
+        </form>
+        <button id="next-book">Next Book</button>
+        <button id="show-recommendations" style="display:none;">Show Recommendations</button>
+    </div>
+
+    <script>
+        let books = [];
+        let currentIndex = 0;
+        let genrePreferences = {};
+        let ratedBooks = [];
+
+        // Wait for the DOM to load before adding event listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            // Fetch the JSON file
+            fetch('books.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    books = getRandomBooks(data, 10);
+                    displayBook();
+                })
+                .catch(error => console.error('Error fetching JSON:', error));
+
+            // Event listener for the "Next Book" button
+            document.getElementById('next-book').addEventListener('click', () => {
+                const ratingForm = document.getElementById('rating-form');
+                const rating = ratingForm.querySelector('input[name="rating"]:checked');
+                if (rating) {
+                    const currentBook = books[currentIndex];
+                    ratedBooks.push(currentBook);
+                    if (parseInt(rating.value) >= 3) {
+                        currentBook.genre.split(', ').forEach(genre => {
+                            genrePreferences[genre] = (genrePreferences[genre] || 0) + 1;
+                        });
+                    }
+                    currentIndex++;
+                    ratingForm.reset();
+                    displayBook();
+                } else {
+                    alert('Please select a rating before proceeding.');
+                }
+            });
+
+            // Event listener for the "Show Recommendations" button
+            document.getElementById('show-recommendations').addEventListener('click', () => {
+                showRecommendations();
+            });
+        });
+
+        // Function to select 10 random books
+        function getRandomBooks(data, count) {
+            const shuffled = data.sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, count);
+        }
+
+        // Function to display the current book
+        function displayBook() {
+            if (currentIndex < books.length) {
+                const book = books[currentIndex];
+                document.getElementById('book-title').textContent = book.title;
+                document.getElementById('book-details').textContent = `Author: ${book.author}, Year: ${book.year}, Genre: ${book.genre}, Publisher: ${book.publisher}`;
+            } else {
+                document.getElementById('book-title').textContent = 'No more books to rate.';
+                document.getElementById('rating-form').style.display = 'none';
+                document.getElementById('next-book').style.display = 'none';
+                document.getElementById('show-recommendations').style.display = 'block';
+            }
+        }
+
+        // Function to show recommendations based on top genres
+        function showRecommendations() {
+            const topGenres = Object.entries(genrePreferences)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 3)
+                .map(entry => entry[0]);
+
+            if (topGenres.length > 0) {
+                fetch('books.json')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        let recommendations = [];
+                        for (const genre of topGenres) {
+                            const genreBooks = data.filter(book => book.genre.includes(genre) && !ratedBooks.some(ratedBook => ratedBook.title === book.title));
+                            if (genreBooks.length > 0) {
+                                recommendations.push(genreBooks[0]);
+                            }
+                        }
+                        displayRecommendations(recommendations);
+                    })
+                    .catch(error => console.error('Error fetching JSON:', error));
+            }
+        }
+
+        // Function to display the recommendations
+        function displayRecommendations(recommendations) {
+            const bookContainer = document.getElementById('book-container');
+            bookContainer.innerHTML = '<h2>Recommended Books</h2>';
+            recommendations.forEach(book => {
+                const bookElement = document.createElement('p');
+                bookElement.textContent = `${book.title} by ${book.author} - Genre: ${book.genre} - Year: ${book.year} - Publisher: ${book.publisher}`;
+                bookContainer.appendChild(bookElement);
+            });
+            const rateMoreButton = document.createElement('button');
+            rateMoreButton.textContent = 'Rate More Books';
+            rateMoreButton.addEventListener('click', rateMoreBooks);
+            bookContainer.appendChild(rateMoreButton);
+        }
+
+        // Function to rate more books
+        function rateMoreBooks() {
+            fetch('books.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    books = getRandomBooks(data.filter(book => !ratedBooks.some(ratedBook => ratedBook.title === book.title)), 10);
+                    currentIndex = 0;
+                    document.getElementById('rating-form').style.display = 'block';
+                    document.getElementById('next-book').style.display = 'block';
+                    document.getElementById('show-recommendations').style.display = 'none';
+                    displayBook();
+                })
+                .catch(error => console.error('Error fetching JSON:', error));
+        }
+    </script>
+</body>
+</html>
