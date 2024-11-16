@@ -82,16 +82,20 @@ section p {
   margin: 0 auto;
 }
 
+/* Carousel Styles */
 .carousel {
   display: flex;
   overflow: hidden;
-  justify-content: center;
-  align-items: center;
 }
 
 .carousel-slide {
-  display: none;
+  display: none; /* Hide all slides by default */
   text-align: center;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide:first-child {
+  display: block; /* Show the first slide by default */
 }
 
 .carousel-slide img {
