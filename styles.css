@@ -1,0 +1,84 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1c1c1c;
+  color: #f4f4f4;
+}
+
+/* Header Section Styling */
+header {
+  background: url('/mnt/data/A_muscular_werewolf_working_as_a_blacksmith,_hamme.jpeg') no-repeat center center/cover;
+  height: 300px;
+  text-align: center;
+  color: gold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.5rem;
+}
+
+/* Navigation Menu */
+nav {
+  background-color: #9b1c1c;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: gold;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f4f4f4;
+}
+
+/* Sections */
+section {
+  padding: 50px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 1.2rem;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #9b1c1c;
+  padding: 10px;
+  text-align: center;
+  color: gold;
+}
