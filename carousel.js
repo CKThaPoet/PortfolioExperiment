@@ -1,3 +1,4 @@
+// Fixed JavaScript for Carousel Navigation <!-- Highlighted: Updated JavaScript for the carousel -->
 let currentSlide = 0;
 
 function showSlide(index) {
@@ -13,16 +14,17 @@ function showSlide(index) {
         currentSlide = index; // Update current slide index
     }
 
-    // Hide all slides
+    // Hide all slides and show the current one
     slides.forEach((slide, i) => {
         slide.style.display = i === currentSlide ? 'block' : 'none';
     });
 }
 
-// Function to move to the next or previous slide
 function moveSlide(step) {
     showSlide(currentSlide + step);
 }
 
 // Initialize the first slide
-showSlide(currentSlide);
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(currentSlide);
+});
