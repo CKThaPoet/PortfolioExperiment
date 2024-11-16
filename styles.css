@@ -75,6 +75,68 @@ section p {
   font-size: 1.2rem;
 }
 
+/* Image Carousel */
+.carousel-container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-slide {
+  display: none;
+  text-align: center;
+}
+
+.carousel-slide img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.carousel-slide p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #f4f4f4;
+}
+
+/* Navigation Buttons */
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: gold;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+/* Show the first image by default */
+.carousel-slide:first-child {
+  display: block;
+}
+
 /* Footer Styling */
 footer {
   background-color: #9b1c1c;
