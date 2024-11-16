@@ -1,11 +1,10 @@
-// Fixed JavaScript for Carousel Navigation <!-- Highlighted: Updated JavaScript for the carousel -->
 let currentSlide = 0;
 
 function showSlide(index) {
     const slides = document.querySelectorAll('.carousel-slide');
     const totalSlides = slides.length;
 
-    // Ensure the index wraps around correctly
+    // Wrap the index within bounds
     if (index >= totalSlides) {
         currentSlide = 0; // Wrap to the first slide
     } else if (index < 0) {
@@ -14,17 +13,18 @@ function showSlide(index) {
         currentSlide = index; // Update current slide index
     }
 
-    // Hide all slides and show the current one
+    // Hide all slides and show only the current one
     slides.forEach((slide, i) => {
         slide.style.display = i === currentSlide ? 'block' : 'none';
     });
 }
 
 function moveSlide(step) {
-    showSlide(currentSlide + step);
+    currentSlide += step;
+    showSlide(currentSlide);
 }
 
-// Initialize the first slide
+// Highlighted Change: Initialize the carousel after the DOM is loaded properly
 document.addEventListener('DOMContentLoaded', () => {
     showSlide(currentSlide);
 });
