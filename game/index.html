@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page P5.js Game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #defaultCanvas0 {
+            display: block;
+        }
+        #popup {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1000px;
+            height: 1000px;
+            background: linear-gradient(to bottom, red, black, green);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 72px;
+            font-family: fantasy;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div id="popup" onclick="removePopup()">African American History: Interactive by Chani Kinsler *Click to Continue*</div>
+    <div id="endPopup" style="display: none;">All zones clicked! Zones clicked: <span id="zoneCount"></span></div>
+    <div id="buttons" style="display: none;">
+        <button class="button" onclick="resetGame()">Start Over</button>
+        <button class="button" onclick="continueGame()">Continue</button>
+    </div>
+    
+    <script>
+        let bgImage;
+        let interactionZones;
+        let clickedMessage = "";
+        let clickedZones = new Set();
+
+        function preload() {
+            // Load the background image
+            bgImage = loadImage('African American Bookshelf.jpg');
+        }
+
+        function setup() {
+            createCanvas(1000, 1000).parent(document.body);
+            // Define interaction zones
+            interactionZones = [
+                {x: 50, y: 200, w: 200, h: 600, name: 'Bookshelf Left', message: 'American Slave Revolts and Conspiracies by Keey Walters. A book about African descendants and their resistance to American slavery.'},
+                {x: 296, y: 290, w: 100, h: 600, name: 'Bookshelf Middle', message: 'Africanism in American Culture by Joseph E. Holloway. A book that dives into the african culture still present in Diaspora Africans.'},
+                {x: 830, y: 200, w: 100, h: 400, name: 'Bookshelf Right', message: 'Black America: State by State Historial Encyclopedia edited by Alton Hornsby. A book about African American accoplishments, involement in the advancement in each state in America, and notable individuals.'},
+                {x: 490, y: 168, w: 200, h: 200, name: 'Window', message: 'THE FUTURE IS IN THE BOOKS ABOUT OUR HISTORY, EACH ONE OF US CAN TEACH ONE TO REACH THE NEXT GENERATION TO IMPROVE THE WORLD.'},
+                {x: 712, y: 224, w: 100, h: 280, name: 'Pan-African Flag', message: 'A Pan African flag, created by The Universal Negro Improvement Association and African Communities League in the 1920s as a response to racism , as a symbol of Black Liberation, the stars representing anti-colonialism or emacipation from coloialism.'},
+                {x: 316, y: 858, w: 100, h: 80, name: 'USA Flag', message: 'The formally enslaved now Free, have had many names all being social constructs: Negro, African, Colored, African-American,Afro American, Black, and Black American. All are still used minus Negro, Afro American, an Colored. They are a unique makeup, genetically being desendant of Africans, but enthically American blending cultures from both backgrounds.'},
+                {x: 520, y: 500, w: 100, h: 300, name: 'Male', message: 'Lets read We Will Shoot Back by Dr. Akinyele Umoja. The history of disinfranchment of Black gun ownership, and how African AMericans used armed self defense as a tool for resistence to discrimination, intimidation, and protection of human rights.'},
+                {x: 410, y: 510, w: 100, h: 300, name: 'Female', message: 'I wonder if this bookshelf has the book Sisters in the Struggle, African American women in the Civil Rights -Black Power Movement by Bettye Collier-Thomas and V.P Franklin.'},
+                {x: 316, y: 96, w: 100, h: 300, name: 'Constitution', message: 'These were changes to the Constitution, granted freedom to African Americans after fighting for their right to no longer be slaves in the United States of America. 13th Amendment: Neither slavery nor involuntary servitude, except as a punishment for crime whereof the party shall have been duly convicted, shall exist within the United States, or any place subject to their jurisdiction. 15th Amendment: All persons born or naturalized in the United States, and subject to the jurisdiction thereof, are citizens of the United States and of the State wherein they reside. No State shall make or enforce any law which shall abridge the privileges or immunities of citizens of the United States; nor shall any State deprive any person of life, liberty, or property, without due process of law; nor deny to any person within its jurisdiction the equal protection of the laws. 15th Amendment: The right of citizens of the United States to vote shall not be denied or abridged by the United States or by any State on account of race, color, or previous condition of servitude.'}
+            ];
+        }
+
+        function draw() {
+            // Draw the background image
+            background(bgImage);
+
+            // Highlight zones when mouse is over them
+            noFill();
+            stroke(0, 255, 0);
+            strokeWeight(2);
+
+            let currentZone = null;
+
+            for (let zone of interactionZones) {
+                if (isMouseOver(zone)) {
+                    rect(zone.x, zone.y, zone.w, zone.h);
+                    currentZone = zone;
+                }
+            }
+            function resetGame() {
+    clickedZones.clear();
+    clickedMessage = "";
+    document.getElementById('endPopup').style.display = 'none';
+    document.getElementById('buttons').style.display = 'none';
+}
+
+function continueGame() {
+    clickedMessage = "";
+    document.getElementById('endPopup').style.display = 'none';
+    document.getElementById('buttons').style.display = 'none';
+}
+
+            // Display the current mouse coordinates and zone name
+            displayCoordinates(currentZone);
+
+            // Display clicked message with word wrapping
+            if (clickedMessage !== "") {
+                let padding = 20;
+                let maxWidth = 400;
+                let words = clickedMessage.split(' ');
+                let lines = [];
+                let currentLine = words[0];
+
+                for (let i = 1; i < words.length; i++) {
+                    let word = words[i];
+                    if (textWidth(currentLine + ' ' + word) < maxWidth) {
+                        currentLine += ' ' + word;
+                    } else {
+                        lines.push(currentLine);
+                        currentLine = word;
+                    }
+                }
+                lines.push(currentLine);
+
+                let rectHeight = lines.length * 30 + padding * 3;
+                let rectWidth = maxWidth + padding * 10;
+
+                fill(255);
+                rect(width / 2 - rectWidth / 2, height / 2 - rectHeight / 2, rectWidth, rectHeight, 10);
+                fill(0);
+                textSize(24);
+                textAlign(CENTER, CENTER);
+                textStyle(BOLD);
+                for (let i = 0; i < lines.length; i++) {
+                    text(lines[i], width / 2, height / 2 - rectHeight / 2 + padding + i * 30 + 15);
+                }
+            }
+        }
+
+        function isMouseOver(zone) {
+            return mouseX > zone.x && mouseX < zone.x + zone.w && mouseY > zone.y && mouseY < zone.y + zone.h;
+        }
+
+        function displayCoordinates(currentZone) {
+            fill(0);
+            noStroke();
+            textSize(20);
+            let textY = mouseY - 20;
+            let textX = mouseX + 10;
+            text(`MouseX: ${mouseX}, MouseY: ${mouseY}`, textX, textY);
+
+            if (currentZone) {
+                textSize(24);
+                textStyle(BOLD);
+                text(`Zone: ${currentZone.name}`, textX, textY - 30);
+            }
+        }
+
+        function mousePressed() {
+    for (let zone of interactionZones) {
+        if (isMouseOver(zone)) {
+            clickedMessage = zone.message;
+            clickedZones.add(zone.name);
+
+            if (clickedZones.size === interactionZones.length) {
+                document.getElementById('zoneCount').innerText = clickedZones.size;
+                document.getElementById('endPopup').style.display = 'flex';
+                document.getElementById('buttons').style.display = 'block';
+            }
+            break;
+        }
+    }
+}
+
+        function removePopup() {
+            let popup = document.getElementById('popup');
+            if (popup) {
+                popup.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
