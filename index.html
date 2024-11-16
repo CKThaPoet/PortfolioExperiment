@@ -16,6 +16,10 @@
         </div>
     </header>
 
+    <audio id="backgroundMusic" src="Cinematic Drums Epic Percussion Background Music by Alec Koff.mp3" preload="auto"></audio>
+
+    <button onclick="playMusic()">Play Background Music</button>
+
     <!-- Navigation Menu -->
     <nav>
         <ul>
@@ -25,9 +29,17 @@
         </ul>
     </nav>
 
-    <section id="textual">
-      <h2>Textual AI</h2>
-      <p>Explore my work in Natural Language Processing, text generation, and conversational AI.</p>
+    <script>
+        function playMusic() {
+            var music = document.getElementById("backgroundMusic");
+    
+            // Ensure autoplay works by trying to play when the page loads
+            music.play().catch((error) => {
+                console.log("Autoplay failed due to browser restrictions. User interaction required.");
+            });
+        }
+    </script>
+    
   
       <!-- Textual Projects Cards -->
       <section id="textual">
